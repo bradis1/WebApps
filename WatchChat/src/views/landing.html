@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Watch videos and chat with friends.">
+    <meta name="author" content="Daniel A. Deychakiwsky">
+    <title>WatchChat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="file://localhost/Users/integral/Documents/Dev/WebApps/WatchChat/src/views/styles.css">
+</head>
+
+<body>
+    <!-- Begin Modal --> 
+    <div id="modal" class="modal fade centered">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>WatchChat</h1>
+                </div>
+                <div class="modal-body">
+                    <p>What is your alias?</p>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input id="alias" type="text" class="form-control" placeholder="Alias">
+                    </div>
+                </div>
+                <div class="modal-footer centered">
+                    <button id="chat" type="button" class="btn btn-success">Go Chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal --> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script type="text/javascript" src="file://localhost/Users/integral/Documents/Dev/WebApps/WatchChat/src/controllers/clientModal.js"></script>
+</body>
+
+</html>

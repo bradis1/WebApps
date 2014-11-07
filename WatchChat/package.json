@@ -1,0 +1,10 @@
+{
+	"name" : "WatchChat",
+	"email" : "D.Deychak@gmail.com",
+	"version" : "0.0.1",
+	"description" : "A chat app for watching videos together.",
+	"dependencies" : {
+		"express" : "latest",
+		"socket.io" : "latest"
+	}
+}
