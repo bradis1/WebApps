@@ -6,8 +6,8 @@
 
 var app = require('express')();
 var server = require('http').Server(app);
-var routes = require('./controllers/routes.js');
-var sockets = require('./controllers/sockets.js');
+var routes = require('./controllers/Routes.js');
+var sockets = require('./controllers/Sockets.js');
 var rootPath = __dirname;
 
 routes(app,rootPath);

@@ -4,31 +4,38 @@
 
 'use strict';
 
-//disable modal closing on off-click
-//disable modal closing on keyboard escape key press
-$('#modal').modal({
+//set modal options
+modal.modal({
 	backdrop: 'static',
 	keyboard: false
 });
 
-//show the modal
-$('#modal').modal('show');
+//show the modal and disable the chat button by default
+chatButton.prop('disabled', true);
+modal.modal('show');
 
-//listen to changes on alias input
-$('#alias').keyup(function(){
-	var v = $(this).val(),
-		pattern = /^[a-zA-Z0-9]{2,20}$/;
+//as the user types
+aliasBar.keyup(function(key){
+	var	pattern = /^[a-zA-Z0-9]{2,20}$/;
 
-	if (pattern.test(v)){
+	if (pattern.test($(this).val())){
 		$(this).removeClass("not-valid")
 			   .addClass("valid");
+		chatButton.prop('disabled', false);
+		//enter key
+		if (key.keyCode === 13){
+			addUser();
+			modal.modal('hide');
+		}
 	} else {
 		$(this).removeClass("valid")
 			   .addClass("not-valid");	
+		chatButton.prop('disabled', true);
 	}
 });
 
-//listen to modal button click
-$('#chat').click(function(){
-	var enteredAlias = $('#alias').val();
+//on-click: add the user and hide the modal
+chatButton.click(function(){
+	modal.modal('hide');
+	addUser();
 });

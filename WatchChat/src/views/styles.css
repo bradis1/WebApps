@@ -2,6 +2,43 @@ html, body {
 	background-color: #333;
 }
 
+ul {
+    list-style-type: none;
+    word-wrap:break-word;
+}
+
+li {
+	padding:5px;
+}
+
+#video {
+	float: left;
+	width: 60%;
+	height:300px;
+}
+
+#inbox {
+	overflow-y: scroll;
+	height: 100%;
+	font-size: 125%;
+}
+
+.header {
+	text-align: center;
+	color: white;
+	border-bottom: 1px solid white;
+	margin-bottom: 50px;
+}
+
+.input-bar {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.input-bar-wrap {
+	margin: 20px;
+}
+
 .centered {
 	text-align: center;
 }
@@ -16,4 +53,18 @@ html, body {
 	border-color: rgba(255, 0, 0, 0.8);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6);
 	outline: 0 none;
+}
+
+.chat-box {
+	border: 1px solid white;
+	background-color: #848484;
+	margin: 0 auto;
+	height:300px;
+	width:40%;
+	color: white;
+	float: left;
+}
+
+.user-count {
+	color:white;
 }

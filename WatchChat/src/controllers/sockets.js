@@ -5,18 +5,50 @@
 'use strict';
 
 module.exports = function(httpServer){
-	var io = require('socket.io')(httpServer);
+
+	var io = require('socket.io')(httpServer),
+			currentVideo = "",
+			numUsers = 0; 
 
 	io.on('connection', function(socket){
-		console.log('a user connected');
+		var user;
 
 		socket.on('disconnect',function(){
-			console.log('a user disconnected');
+			if (user){
+				numUsers--;
+				io.emit('removed-user', {
+					'user': user,
+					'count': numUsers
+				});
+			}
 		});
 
-		socket.on('chat message', function(msg){
-    		console.log('message: ' + msg);
-    		io.emit('chat message', msg);
+		socket.on('add-user', function(alias){
+			user = alias;
+			numUsers++;
+			if (user) {
+	    		io.emit('added-user', {
+						'user': user,
+						'count': numUsers,
+						'video': currentVideo
+				});
+    		}
+  		});
+
+  		socket.on('message', function(msg){
+  			if (user){
+  				io.emit('message', {
+  					'alias' : user,
+  					'message' : msg
+  				});
+  			}
+  		});
+
+  		socket.on('youtube-video', function(data){
+  			if (user){
+  				currentVideo = "https://www.youtube.com/embed/" + data;
+  				io.emit('update-player', currentVideo);
+  			}
   		});
 	});
 }

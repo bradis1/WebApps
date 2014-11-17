@@ -10,7 +10,9 @@
     <title>WatchChat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="file://localhost/Users/integral/Documents/Dev/WebApps/WatchChat/src/views/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cbd40eb6465e3082eb114525548aab635c9d15cd.googledrive.com/host/0B69soXz4Ir5gY19TNk9zTXZIb00">
+    <link rel="shortcut icon" href="https://767136fdecae55dbccab0a4474b8a681ce6d5cb8.googledrive.com/host/0B69soXz4Ir5gOWQ4R0xDVzk5eFE" type="image/x-icon">
+    <link rel="icon" href="https://767136fdecae55dbccab0a4474b8a681ce6d5cb8.googledrive.com/host/0B69soXz4Ir5gOWQ4R0xDVzk5eFE" type="image/x-icon">
 </head>
 
 <body>
@@ -29,16 +31,43 @@
                     </div>
                 </div>
                 <div class="modal-footer centered">
-                    <button id="chat" type="button" class="btn btn-success">Go Chat</button>
+                    <button id="chat" type="button" class="btn btn-primary">Go Chat</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Modal --> 
+    <!-- End Modal -->
+    <!-- Begin Chat Box -->
+    <div class="container">
+        <div class="header">
+            <h1>WatchChat <small>Watch videos, talk about em'</small></h1>
+        </div>
+        <div class="row">
+            <div id="chatbox" class="col-xs-18 chat-box">
+                <ul id="inbox">
+                </ul>
+            </div>
+            <iframe id="video" src="" allowfullscreen></iframe>
+        </div>
+
+        <div id="input-bar" class="row input-bar-wrap">
+            <div class="input-group input-group-lg input-bar">
+                <span class="input-group-btn">
+                    <button id="send-button" class="btn btn-primary" type="button">Send</button>
+                </span>
+            <input id="message" type="text" class="form-control">
+            </div>
+        </div>
+        <h5 id="user-count" class="user-count">0 human(s)</h5>
+    </div>
+    <!-- End Chat Box --> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script type="text/javascript" src="file://localhost/Users/integral/Documents/Dev/WebApps/WatchChat/src/controllers/clientModal.js"></script>
+    <script type="text/javascript" src="https://bddbb9266f4e35445f454c75e25169ba7bbd2ff7.googledrive.com/host/0B69soXz4Ir5gajNHd0p2R01QY1U"></script>
+    <script type="text/javascript" src="https://7a1b9aec946f8cc0c62498a09f429293c54de57f.googledrive.com/host/0B69soXz4Ir5gSlBXdE1BZ08xeWc"></script>
+    <script type="text/javascript" src="https://c1e5714d13273eed5c5d1d090137b7bd2a966f25-www.googledrive.com/host/0B69soXz4Ir5gSzJaSU4tT2VuN28"></script>
+    <script type="text/javascript" src="https://651b1ef9d0a20d8c9caa83df71c81738b920fa89.googledrive.com/host/0B69soXz4Ir5gOEpYZzlvamFMc2c"></script>
 </body>
 
 </html>
